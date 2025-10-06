@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabbed Content</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #fff;
+    padding: 50px;
+  }
+    input[type="radio"]{
+    display: none;
+  }
+  .tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    border: 2px solid #1e40af;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .tabs label {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-bottom: 3px solid transparent;
+  }
+  #tab1:checked ~ .tabs label[for="tab1"],
+  #tab2:checked ~ .tabs label[for="tab2"],
+  #tab3:checked ~ .tabs label[for="tab3"],
+  #tab4:checked ~ .tabs label[for="tab4"] {
+    color: #ffc107;
+    border-bottom: 3px solid #ffc107;
+  }
+  .content {
+    display: none;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+  }
+  .content img {
+    max-width: 400px;
+    border-radius: 10px;
+  }
+  .tab-content {
+    max-width: 600px;
+  }
+#tab1:checked ~ .content-container #content1,
+#tab2:checked ~ .content-container #content2,
+#tab3:checked ~ .content-container #content3,
+#tab4:checked ~ .content-container #content4,
+#tab5:checked ~ .content-container #content5,
+#tab6:checked ~ .content-container #content6,
+#tab7:checked ~ .content-container #content7,
+#tab8:checked ~ .content-container #content8 {
+    display: flex;
+}
+
+  .btn {
+    display: inline-block;
+    background: #ffc107;
+    color: #0f172a;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .btn:hover {
+    background: #e0a800;
+  }
+</style>
+</head>
+<body>
+<input type="radio" name="tab" id="tab1" checked>
+<input type="radio" name="tab" id="tab2">
+<input type="radio" name="tab" id="tab3">
+<input type="radio" name="tab" id="tab4">
+
+<div class="tabs">
+  <label for="tab1">Vehicles</label>
+  <label for="tab2">Trucks</label>
+  <label for="tab3">Earthmoving Equipment</label>
+  <label for="tab4">Marine</label>
+</div>
+
+<div class="content-container">
+  <!-- Vehicles -->
+  <div class="content" id="content1">
+    <div class="tab-content">
+      <h2>We offer competitive <em>financing solutions</em> for any assets</h2>
+      <p>At Belfort Finance, we offer competitive financing solutions for cars, SUVs, 4x4s, vans, and utes. With access to dealerships across Australia, we secure the best prices and exclusive discounts for our customers.</p>
+      <a href="#" class="btn">Kickstart my pre-approval process</a>
+    </div>
+    <img src="https://via.placeholder.com/400x250?text=Vehicle" alt="Vehicle">
+  </div>
+  <!-- Trucks -->
+  <div class="content" id="content2">
+    <div class="tab-content">
+      <h2>Trucks Financing Solutions</h2>
+      <p>We provide tailored financial solutions for trucks, ensuring competitive rates and flexible repayment options to help your business grow.</p>
+      <a href="#" class="btn">Kickstart my pre-approval process</a>
+    </div>
+    <img src="https://via.placeholder.com/400x250?text=Truck" alt="Truck">
+  </div>
+  <!-- Earthmoving Equipment -->
+  <div class="content" id="content3">
+    <div class="tab-content">
+      <h2>Earthmoving Equipment Financing</h2>
+      <p>Access flexible financing solutions for earthmoving equipment, from excavators to loaders, making sure you can manage your projects efficiently.</p>
+      <a href="#" class="btn">Kickstart my pre-approval process</a>
+    </div>
+    <img src="https://via.placeholder.com/400x250?text=Earthmoving+Equipment" alt="Earthmoving Equipment">
+  </div>
+  <!-- Marine -->
+  <div class="content" id="content4">
+    <div class="tab-content">
+      <h2>Marine Financing Solutions</h2>
+      <p>Get the best deals for boats, yachts, and other marine equipment with personalized financing solutions for your needs.</p>
+      <a href="#" class="btn">Kickstart my pre-approval process</a>
+    </div>
+    <img src="https://via.placeholder.com/400x250?text=Marine" alt="Marine">
+  </div>
+</div>
+</body>
+</html>

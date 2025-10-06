@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Belfort Finance Services</title>
+<style>
+:root {
+    --secondary-color: #ffc107;
+    --txt-black: #000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #fff;
+    padding: 50px;
+    margin: 0;
+}
+
+.tab-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.tab-container {
+    cursor: pointer;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(28, 40, 61, 1);
+    gap: 50px;
+    width: 100%;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+
+.tabs label {
+    padding: 15px 0;
+    cursor: pointer;
+    transition: 0.45s ease-in-out;
+    border-bottom: 1px solid transparent;
+    white-space: nowrap;
+}
+
+.tabs label:hover {
+    color: #ffc107;
+    border-bottom: 1px solid #ffc107;
+}
+
+#tab1:checked ~ .tab-container .tabs label[for="tab1"],
+#tab2:checked ~ .tab-container .tabs label[for="tab2"],
+#tab3:checked ~ .tab-container .tabs label[for="tab3"],
+#tab4:checked ~ .tab-container .tabs label[for="tab4"],
+#tab5:checked ~ .tab-container .tabs label[for="tab5"],
+#tab6:checked ~ .tab-container .tabs label[for="tab6"],
+#tab7:checked ~ .tab-container .tabs label[for="tab7"],
+#tab8:checked ~ .tab-container .tabs label[for="tab8"] {
+    color: #ffc107;
+    border-bottom: 1px solid #ffc107;
+}
+
+.service-content-container {
+    display: none;
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+#tab1:checked ~ .content-container #content1,
+#tab2:checked ~ .content-container #content2,
+#tab3:checked ~ .content-container #content3,
+#tab4:checked ~ .content-container #content4,
+#tab5:checked ~ .content-container #content5,
+#tab6:checked ~ .content-container #content6,
+#tab7:checked ~ .content-container #content7,
+#tab8:checked ~ .content-container #content8 {
+    display: flex;
+}
+
+.content-container {
+    margin-top: 50px;
+}
+
+.service-desc-container {
+    width: calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.service-desc-container h3 {
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 56px;
+    margin-bottom: 40px;
+}
+
+.service-desc-container h3 span {
+    font-weight: 400;
+    color: var(--secondary-color);
+}
+
+.service-desc-container p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 31px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.service-desc-container h5 {
+    margin-top: 10px;
+    padding: 12px 23px;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    color: var(--txt-black);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.service-desc-container h5:hover {
+    opacity: 0.9;
+}
+
+.service-img-container {
+    width: calc(50% - 20px);
+}
+
+.service-img-container img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .tabs {
+        gap: 20px;
+    }
+    
+    .tabs label {
+        font-size: 14px;
+    }
+    
+    .service-desc-container,
+    .service-img-container {
+        width: 100%;
+    }
+    
+    .service-desc-container h3 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
+</style>
+</head>
+<body>
+<div class="tab-wrapper">
+    <input type="radio" name="tab" id="tab1" checked>
+    <input type="radio" name="tab" id="tab2">
+    <input type="radio" name="tab" id="tab3">
+    <input type="radio" name="tab" id="tab4">
+    <input type="radio" name="tab" id="tab5">
+    <input type="radio" name="tab" id="tab6">
+    <input type="radio" name="tab" id="tab7">
+    <input type="radio" name="tab" id="tab8">
+    
+    <div class="tab-container">
+        <div class="tabs">
+            <label for="tab1">Vehicles</label>
+            <label for="tab2">Trucks</label>
+            <label for="tab3">Earthmoving Equipment</label>
+            <label for="tab4">Marine</label>
+            <label for="tab5">Agricultural Machinery</label>
+            <label for="tab6">Business Loans</label>
+            <label for="tab7">Solar</label>
+            <label for="tab8">Personal Loans</label>
+        </div>
+    </div>
+    
+    <div class="content-container">
+        <div class="service-content-container content" id="content1">
+            <div class="service-desc-container">
+                <h3>We offer competitive <span>financing solutions</span> for any assets</h3>
+                <p>
+                    At Belfort Finance, we offer competitive financing solutions for cars, SUVs, 4x4s, vans, and utes. With access to dealerships across Australia, we secure the best prices and exclusive discounts for our customers. Our expert team provides low rates and personalized guidance to fit your budget, whether you're buying new or used, from a dealer or a private sale.
+                </p>
+                <p>
+                    We have access to vehicle purchasors, fleets, discounts, and wholesale rates. We're committed to making car ownership accessible and affordable for everyone. Contact us today to drive away in the car you deserve.
+                </p>
+                <h5>Kickstart my pre-approval process</h5>
+            </div>
+            <div class="service-img-container">
+                <img src="/images/image (2).png" alt="Vehicle Financing">
+            </div>
+        </div>
+
+        <div class="service-content-container content" id="content2">
+            <div class="service-desc-container">
+                <h3>Truck <span>financing solutions</span> for your business</h3>
+                <p>
+                    At Belfort Finance, we specialize in truck financing for businesses of all sizes. Whether you need a single truck or an entire fleet, we provide competitive rates and flexible terms tailored to your business needs.
+                </p>
+                <p>
+                    Our team understands the unique requirements of commercial transport. We work with you to structure finance solutions that support your cash flow and business growth objectives.
+                </p>
+                <h5>Kickstart my pre-approval process</h5>
+            </div>
+            <div class="service-img-container">
+                <img src="https://via.placeholder.com/600x400?text=Truck+Financing" alt="Truck Financing">
+            </div>
+        </div>
+
+        <div class="service-content-container content" id="content3">
+            <div class="service-desc-container">
+                <h3>Earthmoving Equipment <span>financing</span></h3>
+                <p>
+                    Finance your earthmoving equipment with Belfort Finance. From excavators to loaders, dozers to graders, we provide competitive financing solutions for all types of heavy machinery.
+                </p>
+                <p>
+                    Our flexible terms and competitive rates help construction and mining businesses acquire the equipment they need to complete projects efficiently and profitably.
+                </p>
+                <h5>Kickstart my pre-approval process</h5>
+            </div>
+            <div class="service-img-container">
+                <img src="https://via.placeholder.com/600x400?text=Earthmoving+Equipment" alt="Earthmoving Equipment">
+            </div>
+        </div>
+
+        <div class="service-content-container content" id="content4">
+            <div class="service-desc-container">
+                <h3>Marine <span>financing solutions</span></h3>
+                <p>
+                    Get on the water sooner with our marine financing solutions. Whether you're looking for a boat, yacht, jet ski, or other watercraft, Belfort Finance offers competitive rates and flexible terms.
+                </p>
+                <p>
+                    Our marine finance specialists understand the unique aspects of boat ownership and can help structure a loan that suits your lifestyle and budget.
+                </p>
+                <h5>Kickstart my pre-approval process</h5>
+            </div>
+            <div class="service-img-container">
+                <img src="https://via.placeholder.com/600x400?text=Marine+Financing" alt="Marine Financing">
+            </div>
+        </div>
+
+        <div class="service-content-container content" id="content5">
+            <div class="service-desc-container">
+                <h3>Agricultural Machinery <span>financing</span></h3>
+                <p>
+                    Support your farming operations with our agricultural machinery financing. From tractors to harvesters, we provide tailored solutions for farmers and agribusinesses across Australia.
+                </p>
+                <p>
+                    We understand seasonal cash flows and can structure repayments to align with your farming cycle, helping you acquire essential equipment without financial strain.
+                </p>
+                <h5>Kickstart my pre-approval process</h5>
+            </div>
+            <div class="service-img-container">
+                <img src="https://via.placeholder.com/600x400?text=Agricultural+Machinery" alt="Agricultural Machinery">
+            </div>
+        </div>
+
+        <div class="service-content-container content" id="content6">
+            <div class="service-desc-container">
+                <h3>Business <span>loans</span> to fuel your growth</h3>
+                <p>
+                    Belfort Finance offers flexible business loans to help your company grow. Whether you need working capital, equipment finance, or funds for expansion, we have solutions tailored to your business needs.
+                </p>
+                <p>
+                    Our business finance experts work with you to understand your goals and structure loans with competitive rates and terms that support your business objectives.
+                </p>
+                <h5>Kickstart my pre-approval process</h5>
+            </div>
+            <div class="service-img-container">
+                <img src="https://via.placeholder.com/600x400?text=Business+Loans" alt="Business Loans">
+            </div>
+        </div>
+
+        <div class="service-content-container content" id="content7">
+            <div class="service-desc-container">
+                <h3>Solar <span>financing solutions</span></h3>
+                <p>
+                    Make the switch to solar energy with our specialized solar financing. We help homeowners and businesses invest in solar panels and battery systems with competitive rates and flexible terms.
+                </p>
+                <p>
+                    Our solar finance options are designed to make renewable energy accessible and affordable, helping you save on energy costs while reducing your environmental impact.
+                </p>
+                <h5>Kickstart my pre-approval process</h5>
+            </div>
+            <div class="service-img-container">
+                <img src="https://via.placeholder.com/600x400?text=Solar+Financing" alt="Solar Financing">
+            </div>
+        </div>
+
+        <div class="service-content-container content" id="content8">
+            <div class="service-desc-container">
+                <h3>Personal <span>loans</span> for life's moments</h3>
+                <p>
+                    Belfort Finance offers personal loans for a variety of needs - from home improvements to debt consolidation, holidays to unexpected expenses. Our competitive rates and flexible terms make borrowing simple and affordable.
+                </p>
+                <p>
+                    Our personal loan specialists work with you to find a solution that fits your budget and helps you achieve your personal goals without financial stress.
+                </p>
+                <h5>Kickstart my pre-approval process</h5>
+            </div>
+            <div class="service-img-container">
+                <img src="https://via.placeholder.com/600x400?text=Personal+Loans" alt="Personal Loans">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
