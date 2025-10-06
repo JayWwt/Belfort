@@ -1086,7 +1086,18 @@ input[type="radio"] {
         height: 100px;
         /* margin-bottom: 30px; */
     }
-
+    .director-container{
+        flex-direction: column;
+    }
+    .director-content-container{
+        width: 100%;
+    }
+    .director-img-container{
+        width: 100%;
+    }
+    .director-sec {
+        padding: 50px 40px;
+    }
 }
 
 @media (max-width : 767px) {
@@ -1274,5 +1285,19 @@ input[type="radio"] {
         display: flex;
         align-items: end;
         justify-content: end;
+    }
+     .director-sec {
+        padding: 50px 20px;
+    }
+    .director-container{
+        padding: 20px 12px;
+    }
+    .director-content-container h3{
+        font-size: 32px;
+        line-height: unset;
+        padding-bottom: 42px;
+    }
+    .director-content-container p{
+        font-size: 16px;
     }
 }
